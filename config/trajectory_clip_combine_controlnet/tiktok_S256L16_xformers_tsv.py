@@ -8,7 +8,7 @@ class Args(BasicArgs):
     log_dir = os.path.join(BasicArgs.root_dir, task_name, method_name)
 
     # data
-    dataset_cf = 'dataset/trajectory_t2i.py'
+    dataset_cf = 'dataset/trajectory_t2i_v2.py'
     max_train_samples = None
     max_eval_samples = None
     # max_eval_samples = 2

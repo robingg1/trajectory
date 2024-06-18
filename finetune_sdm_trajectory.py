@@ -156,9 +156,10 @@ def main_worker(args):
     if args.eval_visu:
         logger.warning("Do eval_visu...")
         if getattr(args, 'refer_clip_preprocess', None):
-            eval_dataset = BaseDataset(args, args.val_yaml, split='val', preprocesser=model.feature_extractor)
+            eval_dataset = BaseDataset(args, args.val_path, split='val', preprocesser=model.feature_extractor)
         else:
-            eval_dataset = BaseDataset(args, args.val_yaml, split='val')
+            eval_dataset = BaseDataset(args, args.val_path, split='val')
+
         eval_dataloader, eval_info = make_data_loader(
             args, args.local_eval_batch_size, 
             eval_dataset)

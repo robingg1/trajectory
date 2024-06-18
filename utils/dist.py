@@ -21,7 +21,7 @@ def dist_init(args, distributed=True):
     if distributed:
         if 'OMPI_COMM_WORLD_SIZE' in os.environ:
             master_addr = os.environ.get("MASTER_ADDR", 'localhost')
-            master_port = os.environ.get("MASTER_PORT", 12475)
+            master_port = os.environ.get("MASTER_PORT", args.master_port)
             master_uri = f"tcp://{master_addr}:{master_port}" #if master_addr else 'localhost'
             world_size = int(os.environ['OMPI_COMM_WORLD_SIZE'])
             world_rank = int(os.environ['OMPI_COMM_WORLD_RANK'])

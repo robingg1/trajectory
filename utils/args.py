@@ -107,6 +107,7 @@ class Args(object):
         parser.add_argument('--fix_dist_seed', type=str_to_bool,
                             nargs='?', const=True, default=False)
         parser.add_argument('--tiktok_data_root', default=None, type=str)
+        parser.add_argument('--master_port', default=12475, type=int)
         # parser.add_argument('--tiktok_ann_root', default=None, type=str)
 
         # input
